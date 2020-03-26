@@ -1,5 +1,6 @@
-import config from '../config.json';
 import { Config } from './domain/types';
+
+const config = require('../config.json');
 
 /**
  * The values in this file are just fallback values, in case someone forgets to update
@@ -9,7 +10,8 @@ import { Config } from './domain/types';
  * */
 const fallbackConfig: Config = {
   BASE_URL: 'coronastatus.no',
-  LANGUAGE: 'no',
+  LOCALE: config.LANGUAGE || 'no',
+  COUNTRY_CODE: config.LANGUAGE || 'no',
   COUNTRY: 'Norway',
   MAP_CENTER: '10.7522, 63.9139',
   MAP_ZOOM: 4,

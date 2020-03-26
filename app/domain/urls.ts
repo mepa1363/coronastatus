@@ -117,4 +117,4 @@ const localeAwareUrls: Urls = {
   }
 };
 
-export const urls = localeAwareUrls[config.LANGUAGE as Locale];
+export const urls = localeAwareUrls[config.COUNTRY_CODE as Locale];
